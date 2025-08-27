@@ -1,0 +1,17 @@
+# Maintainer: Your Name <your@email.com>
+pkgname=quasar-test-package
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Test package for Quasar Linux repo"
+arch=('x86_64')
+url="https://github.com/b-e-n-z1342/quasarlinux-repo"
+license=('GPL')
+depends=('bash')
+source=()
+md5sums=()
+
+package() {
+    mkdir -p "$pkgdir/usr/bin"
+    echo 'echo "Hello from Quasar Linux repo!"' > "$pkgdir/usr/bin/quasar-test"
+    chmod +x "$pkgdir/usr/bin/quasar-test"
+}
