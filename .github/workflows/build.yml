@@ -30,4 +30,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: quasar-packages
-        path: packages/test-package/*.pkg.tar.zst
+        path: packages/test-repo/*.pkg.tar.zst
