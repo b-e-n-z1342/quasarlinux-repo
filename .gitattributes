@@ -1,0 +1,5 @@
+*.db -diff
+*.files -diff
+*.db.tar.gz binary
+*.files.tar.gz binary
+*.pkg.tar.zst binary
