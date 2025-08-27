@@ -22,6 +22,7 @@ jobs:
         
     - name: Build package
       run: |
+        chmod -R 777 packages/test-repo
         cd packages/test-repo
         sudo -u builder makepkg -s --noconfirm
         
