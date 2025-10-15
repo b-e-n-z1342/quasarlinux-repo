@@ -27,7 +27,7 @@ jobs:
     - name: Build package
       run: |
         chmod -R 777 packages/openrc
-        cd packages/test-repo
+        cd packages/openrc
         sudo -u builder makepkg -s --noconfirm
         
     - name: Upload artifacts
