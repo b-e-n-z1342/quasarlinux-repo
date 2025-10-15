@@ -22,12 +22,12 @@ jobs:
         
     - name: Build package
       run: |
-        chmod -R 777 packages/test-repo
+        chmod -R 777 packages/openrc
         cd packages/test-repo
         sudo -u builder makepkg -s --noconfirm
         
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: quasar-packages
-        path: packages/test-repo/*.pkg.tar.zst
+        name: quasar-openrc
+        path: packages/openrc/*.pkg.tar.zst
