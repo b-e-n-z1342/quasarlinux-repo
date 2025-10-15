@@ -24,7 +24,7 @@ jobs:
         pwd
         ls -la
         ls -la packages/
-      - name: Build package
+    - name: Build package
       run: |
         chmod -R 777 packages/openrc
         cd packages/test-repo
