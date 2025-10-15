@@ -19,8 +19,12 @@ jobs:
         pacman -Syu --noconfirm base-devel pacman-contrib git
         useradd -m builder
         echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-        
-    - name: Build package
+    - name: Debug directory structure
+      run: |
+        pwd
+        ls -la
+        ls -la packages/
+      - name: Build package
       run: |
         chmod -R 777 packages/openrc
         cd packages/test-repo
